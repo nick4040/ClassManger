@@ -1,0 +1,30 @@
+.sidebar {
+    background-color: black;
+    padding-top: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    text-align: center;
+    padding: 15px ;
+}
+
+.sidebar .nav-link:hover {
+    color: #0056b3;
+}
+
+.sidebar .nav-link.active {
+    font-weight: bold;
+    color: #0056b3;
+}
+ .col-md-3 {
+    width: 20% !important;
+    min-height:100vh
+  }
+  .nav-header {
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+
