@@ -16,10 +16,10 @@ public class NavbarController {
     @Autowired
     private CourceRepo courceRepo;
 
-    @GetMapping("/")
+    @GetMapping("/Dashboerd")
     public String Dashboerd(Model model) {
         // You can add any attributes you need to your model
-        return "index"; // This will return the "index.html" template
+        return "MediaDash/Dashboerd"; // This will return the "index.html" template
     }
 
     @GetMapping("/Assignment")
