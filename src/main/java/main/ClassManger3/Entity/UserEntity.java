@@ -10,11 +10,11 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long StudentID;
 
-    private String Username;
+    private String username;
 
     private String Password;
 
-    private String Role;
+    private String role;
 
     public UserEntity(String US, String PW, String RO){
         this.setUsername(US);
@@ -35,11 +35,11 @@ public class UserEntity {
     }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
-    public void setUsername(String username) {
-        Username = username;
+    public void setUsername(String username1) {
+        username = username1;
     }
 
     public String getPassword() {
@@ -51,10 +51,10 @@ public class UserEntity {
     }
 
     public String getRole() {
-        return Role;
+        return role;
     }
 
-    public void setRole(String role) {
-        Role = role;
+    public void setRole(String role1) {
+        role = role1;
     }
 }

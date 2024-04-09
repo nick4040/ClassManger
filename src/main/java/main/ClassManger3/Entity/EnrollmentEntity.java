@@ -11,7 +11,7 @@ public class EnrollmentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long EnrollmentID;
 
-    private Long StudentID;
+    private Long studentID;
 
     private Long CourceID;
 
@@ -34,11 +34,11 @@ public class EnrollmentEntity {
     }
 
     public Long getStudentID() {
-        return StudentID;
+        return studentID;
     }
 
     public void setStudentID(Long studentID) {
-        StudentID = studentID;
+        this.studentID = studentID;
     }
 
     public Long getCourceID() {

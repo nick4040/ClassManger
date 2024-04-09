@@ -1,7 +1,11 @@
 package main.ClassManger3.Controller;
 
 import main.ClassManger3.Entity.CourceEntity;
+import main.ClassManger3.Entity.UserEntity;
 import main.ClassManger3.Repo.CourceRepo;
+import main.ClassManger3.Repo.UserRepo;
+import main.ClassManger3.Service.RoleService;
+import main.ClassManger3.Service.RoleServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +19,12 @@ public class NavbarController {
 
     @Autowired
     private CourceRepo courceRepo;
+
+    @Autowired
+    private UserRepo userRepo;
+
+    @Autowired
+    private RoleService roleService;
 
     @GetMapping("/Dashboerd")
     public String Dashboerd(Model model) {
@@ -30,7 +40,10 @@ public class NavbarController {
 
     @GetMapping("/Cources")
     public String Cources(Model model) {
-        List<CourceEntity> listCource = courceRepo.findAll();
+
+        List CourceIds = roleService.getCourceIDs();
+
+        List<CourceEntity> listCource = courceRepo.findAllById(CourceIds);
         model.addAttribute("listCource", listCource);
         
         return "MediaDash/Cources";
