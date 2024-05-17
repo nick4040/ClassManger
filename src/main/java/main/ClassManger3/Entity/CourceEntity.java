@@ -21,11 +21,15 @@ public class CourceEntity {
 
     private String class_assigments;
 
-    public CourceEntity(String ClassN, String ClassD, String ClassT, String ClassA) {
+
+    private String class_link;
+
+    public CourceEntity(String ClassN, String ClassD, String ClassT, String ClassA, String ClassL) {
         this.class_names = ClassN;
         this.class_des = ClassD;
         this.class_teacher = ClassT;
         this.class_assigments = ClassA;
+        this.setClass_link(ClassL);
     }
 
     public CourceEntity(){
@@ -72,4 +76,8 @@ public class CourceEntity {
     public void setClass_assigments(String class_assigments) {
         this.class_assigments = class_assigments;
     }
+
+    public String getClass_link() { return class_link; }
+
+    public void setClass_link(String class_link) { this.class_link = class_link; }
 }
